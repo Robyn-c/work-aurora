@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+
+
+@theme {
+  --font-heading: "Quicksand", sans-serif; 
+  --background: hsl(210, 37%, 11%);
+}
+
+body {
+  background-color: var(--background);
+  color: white;
+}
