@@ -146,9 +146,9 @@ const partners = [
 
   <hr class="partners-rule" bind:this={ruleEl} />
 
-  <ul class="partners-grid">
+  <ul class="partners-grid grid-cols-1 md:grid-cols-3">
     {#each partners as partner, i (partner.name)}
-      <li class="partner-card" bind:this={partnerEls[i]}>
+      <li class="partner-card border-0 py-4 first:border-l-0 last:border-r-0 md:border-r md:border-r-neutral-800 " bind:this={partnerEls[i]}>
 
         <p class="partner-num" bind:this={numEls[i]}>0{i + 1} —</p>
 
@@ -228,7 +228,6 @@ const partners = [
   /* ── Grid ── */
   .partners-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
     list-style: none;
     margin: 0;
     padding: 0;
@@ -236,7 +235,6 @@ const partners = [
 
   .partner-card {
     padding: 2.5rem 2rem;
-    border-right: 1px solid rgba(255, 255, 255, 0.06);
     position: relative;
     overflow: hidden;
     cursor: default;
@@ -244,9 +242,6 @@ const partners = [
     will-change: transform, opacity;
   }
 
-  .partner-card:last-child {
-    border-right: none;
-  }
 
   .partner-card:hover {
     background: rgba(181, 147, 90, 0.04);

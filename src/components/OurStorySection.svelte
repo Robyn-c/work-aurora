@@ -178,9 +178,9 @@
       <p>Today, those same principles guide our mission.</p>
     </div>
 
-    <div class="story-principles">
+    <div class="story-principles md:gap-8 gap-12 grid grid-cols-1 md:grid-cols-3">
       {#each principles as principle, i (principle.title)}
-        <div class="principle" bind:this={principleEls[i]}>
+        <div class="principle border-0 py-4 first:border-l-0 last:border-r-0 md:border-r md:border-r-neutral-800 " bind:this={principleEls[i]}>
           <svg class="principle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             {#if i === 0}
@@ -319,8 +319,6 @@
   }
 
   .story-principles {
-    display: flex;
-    gap: 0;
     margin-top: 2.25rem;
     border-top: 1px solid rgba(255, 255, 255, 0.07);
     border-bottom: 1px solid rgba(255, 255, 255, 0.07);
@@ -329,13 +327,9 @@
 
   .principle {
     flex: 1;
-    padding: 0 1.75rem;
-    border-right: 1px solid rgba(255, 255, 255, 0.07);
     will-change: transform, opacity;
   }
 
-  .principle:first-child { padding-left: 0; }
-  .principle:last-child  { border-right: none; padding-right: 0; }
 
   .principle-icon {
     width: 22px;

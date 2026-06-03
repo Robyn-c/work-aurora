@@ -12,6 +12,5 @@
   <AuroraCore/>
   <WorkedWithUsSection/>
   <OurStorySection/>
-
 </main>
 
