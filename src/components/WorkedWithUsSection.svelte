@@ -3,6 +3,7 @@
   import { animate, stagger } from 'animejs';
   import careerWiredImg   from '$lib/assets/career-convergence.png';
   import freedlanceImg  from '$lib/assets/freedlance-fencing.png';
+  import wdpnImg from '$lib/assets/wdpn.png'
 
 const partners = [
   {
@@ -10,12 +11,12 @@ const partners = [
     tag: 'Workforce Technology',
     logo: careerWiredImg,
     initials: 'CW',
-    logoBg: 'light',   // white bg logo — needs a light container
+    logoBg: 'light',   
   },
   {
     name: 'WDPN',
     tag: 'Career training & placement',
-    logo: null,        // no logo yet — falls back to initials
+    logo: wdpnImg,        // no logo yet — falls back to initials
     initials: 'WD',
     logoBg: 'dark',
   },
