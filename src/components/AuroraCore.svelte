@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { onMount, onDestroy } from 'svelte';
+	import { onMount } from 'svelte';
 	import { animate, createTimeline, type Animatable } from 'animejs';
 
 	// ─── Data ────────────────────────────────────────────────────────────────────
@@ -327,13 +327,6 @@
 
 		transition: transform 0.25s ease, box-shadow 0.25s ease;
 		will-change: transform;
-	}
-
-	.aurora-card.hovered {
-		transform: translateY(-3px) translateX(2px);
-		box-shadow:
-			0 28px 48px -12px rgba(0, 0, 0, 0.6),
-			inset 2px 0 32px -8px color-mix(in srgb, var(--accent) 22%, transparent);
 	}
 
 	/* Ambient glow */

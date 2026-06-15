@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onMount, onDestroy } from 'svelte';
-  import { animate, stagger, createTimeline } from 'animejs';
+  import { animate, stagger } from 'animejs';
   import careerWiredImg   from '$lib/assets/career-convergence.png';
   import freedlanceImg  from '$lib/assets/freedlance-fencing.png';
 
@@ -24,7 +24,7 @@ const partners = [
     tag: 'Construction & Trade',
     logo: freedlanceImg,
     initials: 'FF',
-    logoBg: 'dark',    // black logo — invert it to white on dark bg
+    logoBg: 'dark', 
   },
 ] as const;
 
@@ -42,7 +42,6 @@ const partners = [
   let hasPlayed = false;
 
   function runAnimations() {
-    const tl = createTimeline({ defaults: { ease: 'outExpo' } });
 
     // Eyebrow fades up
     if (eyebrowEl) animate(eyebrowEl, {
@@ -267,7 +266,7 @@ const partners = [
   .partner-num {
     font-size: 11px;
     letter-spacing: 0.2em;
-    color: #2e2b27;
+    color: #5ab578;
     font-weight: 400;
     margin: 0 0 1.5rem;
     will-change: transform, opacity;
@@ -297,7 +296,7 @@ const partners = [
     font-size: 0.75rem;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: #3d3930;
+    color: #5ab578;
     font-weight: 400;
     margin: 0;
     will-change: opacity;
