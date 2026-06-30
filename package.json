@@ -38,6 +38,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"animejs": "^4.4.1"
+		"animejs": "^4.4.1",
+		"retarded-project": "."
 	}
 }
