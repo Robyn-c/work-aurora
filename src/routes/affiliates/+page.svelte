@@ -17,12 +17,6 @@
 
 	const networks = [
 		{
-			name: 'CareerWired',
-			body: 'Advancing workforce innovation through technology-enabled career pathways, employer engagement, and talent development strategies that connect people to meaningful work.',
-			accent: '#5DCAA5',
-			logo: careerWiredImg
-		},
-		{
 			name: 'WDPN',
 			body: 'The Workforce Development Professionals Network strengthens practitioners, educators, and workforce leaders through professional development, collaboration, and shared best practices.',
 			accent: '#85B7EB',
