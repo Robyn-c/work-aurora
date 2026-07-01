@@ -7,13 +7,6 @@
 
 const partners = [
   {
-    name: 'CareerWired',
-    tag: 'Workforce Technology',
-    logo: careerWiredImg,
-    initials: 'CW',
-    logoBg: 'light',   
-  },
-  {
     name: 'WDPN',
     tag: 'Career training & placement',
     logo: wdpnImg,        // no logo yet — falls back to initials
@@ -146,7 +139,7 @@ const partners = [
 
   <hr class="partners-rule" bind:this={ruleEl} />
 
-  <ul class="partners-grid grid-cols-1 md:grid-cols-3">
+  <ul class="partners-grid grid-cols-1 md:grid-cols-2">
     {#each partners as partner, i (partner.name)}
       <li class="partner-card border-0 py-4 first:border-l-0 last:border-r-0 md:border-r md:border-r-neutral-800 " bind:this={partnerEls[i]}>
 
