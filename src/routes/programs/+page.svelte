@@ -1,7 +1,12 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import { animate, stagger } from 'animejs';
+  import { animate, engine } from 'animejs';
 	import { resolve } from '$app/paths';
+
+  let { data } = $props();
+  const jobs = $derived(data?.jobs ?? []);  
+
+
 
   const programs = [
     {
@@ -89,6 +94,8 @@
   });
 </script>
 
+
+
 <!-- Hero -->
 <section class="relative min-h-[80vh] flex flex-col justify-end px-8 md:px-24 pt-36 pb-20 overflow-hidden">
   <div class="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
@@ -118,6 +125,43 @@
   </p>
 </section>
 
+  <!-- JOBS IN DEMAND -->
+  <section class="jobs-section px-8 md:px-24 py-24 border-t grid grid-cols-[3rem_1fr] md:grid-cols-[6rem_1fr] gap-6 md:gap-12" style="border-color: rgba(255,255,255,0.06)">
+    <!-- Left Column -->
+      <div class="entry-index pt-1">
+        <span
+          class="font-heading font-bold text-xl md:text-5xl tabular-nums" style="color: #5DCAA5"
+        >*</span>
+      </div>
+      <div class="entry-content">
+        <p class="font-leading text-xs tracking-widest uppercase mb-4" style="color: #5DCAA5">Local Labor Market</p>
+        <h2 class="font-heading text-3xl md:text-4xl text-white mb-4">Jobs in demand - Pittsburgh</h2>
+        <p class="text-base leading-relaxed max-w-2xl mb-12" style="color: rgba(210,225,220,0.6)">The categories with the most active opening in the Pittsburgh area right now, based on live job postings.</p>
+        {#if jobs.length === 0} 
+        <p style="color: rgba(210,225,220,0.6)">Job data is temporarily unavailable</p>
+        {:else}
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {#each jobs as job, i (job.title)}
+          <li class="jobs-entry-{i} flex flex-col gap-2 p-6 rounded-2xl" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06)">
+            <div class="flex items-center justify-between">
+              <span class="font-heading text-xs tracking-widest tabular-nums" style="color: #5DCAA5">
+                {String(i + 1).padStart(2, '0')}
+              </span>
+            </div>
+            <h3 class="font-heading text-lg text-white">{job.title}</h3>
+            <p class="text-sm" style="rgba(210,225,220,0.45)">e.g. {job.sample}</p>
+            <div class="flex flex-wrap gap-x-4 gap-y-1 text-sm mt-1" style="color: rgba(210,225,220,0.55)">
+              <span>{job.openings} open roles found</span>
+              {#if job.avgSalary}<span>${job.avgSalary.toLocaleString()}/yr avg</span>{/if}
+            </div>
+          </li>
+          {/each}
+        </ul>
+        {/if}
+
+      </div>
+
+  </section>
 <!-- Program Entries -->
 <section class="px-8 md:px-24 pb-8">
   {#each programs as p, i (p.index)}

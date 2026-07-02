@@ -3,7 +3,6 @@
 	import { animate, stagger } from 'animejs';
 	import { resolve } from '$app/paths';
 
-	import careerWiredImg from '$lib/assets/career-convergence.png';
 	import freedLanceImg from '$lib/assets/freedlance-fencing.png';
   import wdpnImg from '$lib/assets/wdpn.png'
   import cwdpImg from '$lib/assets/cwdp.png'
