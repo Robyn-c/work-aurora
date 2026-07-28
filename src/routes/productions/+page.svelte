@@ -2,6 +2,8 @@
   import { onMount } from 'svelte';
   import { animate } from 'animejs';
 
+  import garbage1 from "$lib/assets/garbage1.png"
+
   const films = [
     {
       index: '01',
@@ -75,7 +77,7 @@
 </section>
 
 <!-- Film Panels -->
-{#each films as film, i}
+{#each films as film, i (film.index)}
   <section
     class="film-panel-{i} relative min-h-screen flex flex-col justify-center px-8 md:px-24 py-32 overflow-hidden border-b"
     style="border-color: rgba(255,255,255,0.04)"
@@ -116,6 +118,7 @@
   </section>
 {/each}
 
+<img src={garbage1} alt="whatever" class="w-full">
 <!-- Closing -->
 <section class="px-8 md:px-24 py-28">
   <div class="max-w-2xl">

@@ -26,7 +26,7 @@
 
   const principles = [
     { title: 'Build with integrity',    desc: 'Every structure, deal, and decision reflects who we are.' },
-    { title: 'Protect original ideas',  desc: 'Innovation deserves to be owned and defended.' },
+    { title: 'Continous quality improvement',  desc: `Innovation that's done better, faster, and cheaper. ` },
     { title: 'Create lasting impact',   desc: 'We build for the generations that come after us.' },
   ] as const;
 

@@ -332,6 +332,7 @@
 								src={item.logo}
 								alt="{item.name} logo"
 								class="
+									max-h-64
 									w-auto
 									object-contain
 									transition-transform

@@ -27,7 +27,7 @@
     },
     {
       index: '03',
-      name: 'Become a PA Home Improvement Contractor',
+      name: 'Become a PA Home Improvement Contractor or Traffic Control Specialist',
       category: 'Licensing & Trades',
       body: 'A structured pathway to Pennsylvania Home Improvement Contractor licensure — covering registration requirements, business fundamentals, insurance, and the practical knowledge needed to operate legally and successfully in the construction and renovation trades.',
       accent: '#AFA9EC',
