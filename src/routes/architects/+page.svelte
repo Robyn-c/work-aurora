@@ -30,7 +30,7 @@
 			initials: 'JA',
 			role: 'Aurora Lead Editor',
 			name: 'Joe Angelitas',
-			credentials: 'WDPN Enhance gCDFI and HPCD CoE Audit Leader (Active Fellow)',
+			credentials: 'WDPN Enhance gCDFI and HPCD CoE Audit Leader',
 			accent: '#5DCAA5'
 		},
 		{
@@ -65,7 +65,7 @@
 			initials: 'CW',
 			role: 'Marketing & Communications',
 			name: 'Cassandra Williams',
-			credentials: 'WDPN Enhance CDFI, Entrepreneurial Track Fellow (pending)',
+			credentials: 'WDPN Enhance CDFI, Entrepreneurial Track Fellow',
 			accent: '#AFA9EC'
 		}
 	];
